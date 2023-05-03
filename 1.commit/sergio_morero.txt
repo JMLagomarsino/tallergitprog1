@@ -1,0 +1,95 @@
+PARTE TEÓRICA
+--------------------------------------------------------------------------------------------------
+1.1.1
+Se utiliza el comando "git init"
+
+1.1.2
+Se utiliza el comando "git rm -r" seguido del nombre del directorio
+
+1.1.3
+Si, cualquier archivo subido a un directorio controlado por Git, tambien será controlado por Git
+
+1.1.4
+Se utiliza el comando "git add" y el nombre del archivo
+
+1.1.5
+Se utilizar el comando "git status"
+
+1.1.6
+"git commit" más el nombre del archivo y, si uno quiere evitar abrir el nano para agregar el comentario, le suma "-m" y el comentario que desee entre comillas ""
+
+1.1.7
+Un commit es la "fase final" de una versión de un archivo, es una forma de guardar una versión con los cambios que uno desee, en lugar de guardar una version por CADA cambio hecho y, así, tener todo mucho más ordenado.
+
+
+PARTE PRÁCTICA
+----------------------------------------------------------------------------------------------------
+1.2.3 
+On branch sergio_morero
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sandwich.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sergio_morero.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Explicacion: La salida del comando explica que ambos archivos estan en estado "modified", sandwich.txt aparece arriba porque ya habia sido commiteado antes, mientras que
+el archivo sergio_morero aún no ha sido agregado al repositorio. Necesitaría hacerle un git add.
+
+1.2.5
+Explicacion: Ahora el archivo sandwich.txt está en color verde porque está en la fase "staged", osea, está listo para ser commiteado.
+
+1.2.7
+Explicación: Ahora el archivo sandwich.txt no aparece mas en el git status, pues este ya está commiteado y subido al repositorio.
+
+1.2.9
+commit e8729c3cbf6304cd2d4a2642ea7797f24de0c4ab (HEAD -> sergio_morero)
+Author: SergioMorero <smorero@mail.austral.edu.ar>
+Date:   Thu Apr 20 15:27:11 2023 -0300
+
+    Agrego salsas
+
+commit f90970fb813f47a2a59e25d956e5f322dfbff5f1
+Author: SergioMorero <smorero@mail.austral.edu.ar>
+Date:   Thu Apr 20 15:21:12 2023 -0300
+
+    Agrego mi sandwich.txt
+
+commit 579a34f2db78787d6f499242919e873d7a447480 (origin/main, origin/HEAD, origin/2023, main, 2023)
+Author: Sebastian Iglesias <sebiglesias@users.noreply.github.com>
+Date:   Wed Apr 19 17:27:00 2023 -0300
+
+    Agrego instrucciones para instalar claves ssh en windows con git bash.
+
+commit 786904f65d58dafd7c392efdc806cd91ba0cbb01
+Author: Sebastian Iglesias <sebastian@getcaribou.com>
+Date:   Mon Apr 17 21:58:56 2023 -0300
+
+    Initial commit - repo setup
+
+commit 140733d1b371966335eace561a02d3464af47664
+Author: Sebastian Iglesias <sebiglesias@users.noreply.github.com>
+Date:   Mon Apr 17 20:02:55 2023 -0300
+Explicacion: Git log muestra todos los commits hechos, cada uno con su "codigo/dni" único, estan ordenados del mas reciente (arriba) al mas viejeo (abajo).
+    Initial commit
+
+1.2.10.1
+Explicación: Te explica cada commit hecho en una sola línea, carece de ciertos datos, como el creador y la fecha, igualmente siguen apareciendo de arriba a abajo, del mas reciente al más viejo
+
+1.2.10.2
+Explicación: Este git log te muestra aun mas datos que el git original, incluyendo la cantidad de cambios hechos (agregados, borrados, etc.) 
+
+1.2.11
+Explicación: Aparecen (en color verde) todos los cambios agregados a los aarchivos a comparar, y, en rojo, los ingredientes eliminados/borrados.
+
+1.2.14
+Explicación: No cambia nada, puesto que al commitear el archivo de nuevo, no se refleja cambio alguno en "git status", sino en el git log
+
+1.2.15
+Explicación: Ahora, al hacer "git status" nos aparece "sandich2_feo" como borrado del repositorio, sin embargo, en el git log --oneline aún quedo guardado el commit con el archivo antes de ser borrado.
+
+1.2.16
+Explicación: Aparecen todos los commits hechos (sandiwch , sandwich2, y sandwichfeo, en el caso de este último, además, aparece el nombre que tenia el archivo antes de ser renombrado), inclusives los de los archivos eliminados (puesto que ya había una version guardada de ese archivo).
